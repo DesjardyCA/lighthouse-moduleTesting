@@ -9,8 +9,11 @@
 // different data points to the module's data list, and outputs the sorted list.
 
 // exports is an empty object initially
-exports.getList = () => {
-  return [...secureStorage];
-}
-
 var secureStorage = [];
+exports.getList = () => {
+  var tempStorage = [...secureStorage];
+  return secureStorage;
+}
+exports.addToList = (inp) => {
+  secureStorage.push(inp);
+}
