@@ -10,10 +10,25 @@
 
 // exports is an empty object initially
 var secureStorage = [];
+
 exports.getList = () => {
-  var tempStorage = [...secureStorage];
-  return secureStorage;
+  return getList();
+}
+exports.getSortedList = () => {
+  // return some sorted list (asc)
+  return getSortedList();
 }
 exports.addToList = (inp) => {
   secureStorage.push(inp);
+}
+
+//returns new array containing all elements of secureStorage
+const getList = () => {
+  var temp = [...secureStorage];
+  return temp;
+}
+//return some sorted list, not directly accessable from outside
+const getSortedList = () => {
+  var sorted = []
+  return sorted;
 }
