@@ -9,12 +9,7 @@
 // different data points to the module's data list, and outputs the sorted list.
 
 // exports is an empty object initially
-var args = process.argv.slice(2);
-var secureStorage = [5, 3, 2, 1, 4];
-
-if (args.length != 0) {
-  secureStorage = args;
-}
+var secureStorage = [];
 
 exports.getList = () => {
   return getList();
