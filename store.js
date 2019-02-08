@@ -9,7 +9,12 @@
 // different data points to the module's data list, and outputs the sorted list.
 
 // exports is an empty object initially
+var args = process.argv.slice(2);
 var secureStorage = [5, 3, 2, 1, 4];
+
+if (args.length != 0) {
+  secureStorage = args;
+}
 
 exports.getList = () => {
   return getList();
@@ -19,7 +24,7 @@ exports.getSortedList = () => {
   return getSortedList();
 }
 exports.addToList = (inp) => {
-  secureStorage.push(inp);
+  addToList(inp);
 }
 
 //returns new array containing all elements of secureStorage
@@ -29,4 +34,8 @@ const getList = () => {
 //return some sorted list, not directly accessable from outside
 const getSortedList = () => {
   return [...secureStorage].sort((a, b) => a - b);
+}
+//adds something to list
+const addToList = (inp) => {
+  securedStorage.push(inp);
 }
