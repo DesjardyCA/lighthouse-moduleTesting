@@ -32,5 +32,5 @@ const getSortedList = () => {
 }
 //adds something to list
 const addToList = (inp) => {
-  securedStorage.push(inp);
+  secureStorage.push(inp);
 }
